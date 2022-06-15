@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.19.1">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="MainTimer">
+      <Text Id="__SingleUse_DPO2" Alignment="Left" TypographyId="WildCardTimer">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_1U1V" Alignment="Left" TypographyId="WildCardTimer">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_KUXL" Alignment="Left" TypographyId="WildCardTimer">
+        <Translation Language="GB">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_8QUJ" Alignment="Left" TypographyId="WildCardTimer">
+        <Translation Language="GB">25</Translation>
+      </Text>
+      <Text Id="__SingleUse_SC4Z" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">:</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="Group1">
+      <Text Id="ResourceId4" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_LFMR" Alignment="Center" TypographyId="Clock">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="ResourceId1" Alignment="Left" TypographyId="MENU">
+        <Translation Language="GB">POMODORO</Translation>
+      </Text>
+      <Text Id="ResourceId2" Alignment="Left" TypographyId="MENU">
+        <Translation Language="GB">SHORT BREAK</Translation>
+      </Text>
+      <Text Id="ResourceId3" Alignment="Left" TypographyId="MENU">
+        <Translation Language="GB">LONG BREAK</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_I1NR" Alignment="Left" TypographyId="WildCardTimer">
+        <Translation Language="GB">05</Translation>
+      </Text>
+      <Text Id="__SingleUse_VVMO" Alignment="Left" TypographyId="SettingMinutes">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="verdana.ttf" Size="28" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="MENU" Font="arialbd.ttf" Size="30" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Small" Font="arial.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Clock" Font="arial.ttf" Size="15" Bpp="4" Direction="LTR" FallbackCharacter="?" WidgetWildcardCharacters="0123456789 :APM" />
+    <Typography Id="WildCardTimer" Font="arial.ttf" Size="35" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="SettingMinutes" Font="arial.ttf" Size="80" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+  </Typographies>
+</TextDatabase>

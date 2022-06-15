@@ -1,0 +1,410 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Main",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "bg",
+            "Width": 240,
+            "Height": 320,
+            "Color": {
+              "Red": 240,
+              "Green": 91,
+              "Blue": 86
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "overlay",
+            "Y": 8,
+            "Width": 240,
+            "Height": 48,
+            "Alpha": 20
+          },
+          {
+            "Type": "SwipeContainer",
+            "Name": "swipeContainer",
+            "Width": 240,
+            "Height": 320,
+            "LockPosition": true,
+            "SwipeCutoff": 50,
+            "IndicatorImageNormal": "__designer\\Blue_PageIndicator_dot_indicator_small_normal.png",
+            "IndicatorImageHighlight": "__designer\\Blue_PageIndicator_dot_indicator_small_highlight.png",
+            "EndSwipeElasticWidth": 50,
+            "SelectedPage": "swipeContainer1Page2",
+            "Style": "Style1",
+            "Components": [
+              {
+                "Type": "Container",
+                "Name": "swipeContainer1Page3",
+                "Width": 240,
+                "Height": 320,
+                "Components": [
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea3",
+                    "X": 23,
+                    "Y": 15,
+                    "Width": 195,
+                    "Height": 34,
+                    "TextId": "ResourceId3",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "swipeContainer1Page2",
+                "Width": 240,
+                "Height": 320,
+                "Components": [
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea2",
+                    "X": 13,
+                    "Y": 15,
+                    "Width": 220,
+                    "Height": 34,
+                    "TextId": "ResourceId2",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "Box",
+                    "Name": "overlay_buttonUp",
+                    "X": 170,
+                    "Y": 95,
+                    "Width": 60,
+                    "Height": 60,
+                    "Alpha": 20
+                  },
+                  {
+                    "Type": "Box",
+                    "Name": "overlay_buttonDown",
+                    "X": 170,
+                    "Y": 166,
+                    "Width": 60,
+                    "Height": 60,
+                    "Alpha": 20
+                  },
+                  {
+                    "Type": "ButtonWithIcon",
+                    "Name": "buttonUpP",
+                    "X": 170,
+                    "Y": 95,
+                    "Width": 60,
+                    "Height": 60,
+                    "Pressed": "__designer\\Dark_Buttons_Round_Edge_icon_button_pressed.png",
+                    "Released": "__designer\\Dark_Buttons_Round_Edge_icon_button.png",
+                    "IconPressed": "__designer\\Blue_Icons_Up_arrow_48.png",
+                    "IconReleased": "__designer\\Blue_Icons_Up_arrow_48.png",
+                    "IconX": 7,
+                    "IconY": 17,
+                    "IconHeight": 26,
+                    "IconWidth": 46
+                  },
+                  {
+                    "Type": "ButtonWithIcon",
+                    "Name": "buttonDownP",
+                    "X": 170,
+                    "Y": 166,
+                    "Width": 60,
+                    "Height": 60,
+                    "Pressed": "__designer\\Dark_Buttons_Round_Edge_icon_button_pressed.png",
+                    "Released": "__designer\\Dark_Buttons_Round_Edge_icon_button.png",
+                    "IconPressed": "__designer\\Blue_Icons_Down_arrow_48.png",
+                    "IconReleased": "__designer\\Blue_Icons_Down_arrow_48.png",
+                    "IconX": 7,
+                    "IconY": 17,
+                    "IconHeight": 26,
+                    "IconWidth": 46,
+                    "IconStyle": "Icon14"
+                  },
+                  {
+                    "Type": "Box",
+                    "Name": "overlay_Short",
+                    "X": 13,
+                    "Y": 95,
+                    "Width": 146,
+                    "Height": 131,
+                    "Alpha": 20
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "shortBreakText",
+                    "X": 38,
+                    "Y": 120,
+                    "Width": 89,
+                    "Height": 92,
+                    "TextId": "__SingleUse_VVMO",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_I1NR",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "swipeContainer1Page1",
+                "Width": 240,
+                "Height": 320,
+                "Components": [
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea1",
+                    "X": 29,
+                    "Y": 15,
+                    "Width": 182,
+                    "Height": 34,
+                    "TextId": "ResourceId1",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "Box",
+                    "Name": "overlay_timer",
+                    "X": 38,
+                    "Y": 66,
+                    "Width": 164,
+                    "Height": 74,
+                    "Alpha": 20
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "seperator",
+                    "X": 112,
+                    "Y": 86,
+                    "Width": 13,
+                    "Height": 34,
+                    "TextId": "__SingleUse_SC4Z",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "ScrollList",
+                    "Name": "minuteScrollList",
+                    "X": 52,
+                    "Y": 77,
+                    "Width": 60,
+                    "Height": 50,
+                    "Snapping": true,
+                    "IsCircular": true,
+                    "ItemTemplateName": "MinutesContainer",
+                    "NumberofItems": 26,
+                    "Easing": "Back",
+                    "EasingOption": "Out",
+                    "SwipeAcceleration": 1.0,
+                    "DragAcceleration": 1.0
+                  },
+                  {
+                    "Type": "ScrollList",
+                    "Name": "secondScrollList",
+                    "X": 123,
+                    "Y": 77,
+                    "Width": 60,
+                    "Height": 53,
+                    "Snapping": true,
+                    "IsCircular": true,
+                    "ItemTemplateName": "SecondContainer",
+                    "NumberofItems": 60,
+                    "Easing": "Back",
+                    "EasingOption": "Out",
+                    "SwipeAcceleration": 1.0,
+                    "DragAcceleration": 1.0
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "digitalClock",
+            "X": 70,
+            "Y": 291,
+            "Width": 100,
+            "Height": 22,
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_LFMR",
+            "DisplaySeconds": true,
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 10,
+            "InitialMinute": 10
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "shortBreakUpButtonClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonUpP"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "shortBreakUpButtonClicked"
+            }
+          },
+          {
+            "InteractionName": "shortBreakDownButtonClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonDownP"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "shortBreakDownButtonClicked"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "MinutesContainer",
+        "Width": 60,
+        "Height": 60,
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "numberMinutes",
+            "X": 11,
+            "Y": 9,
+            "Width": 39,
+            "Height": 40,
+            "TextId": "__SingleUse_1U1V",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_8QUJ",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "SecondContainer",
+        "Width": 60,
+        "Height": 60,
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "numberSeconds",
+            "X": 11,
+            "Y": 9,
+            "Width": 39,
+            "Height": 40,
+            "TextId": "__SingleUse_DPO2",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_KUXL",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      }
+    ],
+    "Name": "Pomodoro",
+    "Resolution": {
+      "Width": 240,
+      "Height": 320
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Main",
+    "SelectedStartupLanguage": "GB",
+    "Skin": "Blue",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 240,
+        "Height": 320
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Portrait",
+    "Family": "STM32F4",
+    "Platform": "m4",
+    "ProjectFile": "../STM32F429I_DISCO_REV_E01.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": []
+  },
+  "Version": "4.19.1",
+  "CreatedBy": "4.19.1"
+}
