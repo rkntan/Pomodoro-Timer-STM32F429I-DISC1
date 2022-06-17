@@ -4,6 +4,23 @@
     <Language Id="GB" />
   </Languages>
   <Texts>
+    <TextGroup Id="Screen2Timer">
+      <Text Id="wild_timer_min" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">25</Translation>
+      </Text>
+      <Text Id="wild_timer_sec" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">00</Translation>
+      </Text>
+      <Text Id="separatorS2" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">:</Translation>
+      </Text>
+      <Text Id="timer_sec" Alignment="Left" TypographyId="SettingMinutes">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="timer_min" Alignment="Left" TypographyId="SettingMinutes">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+    </TextGroup>
     <TextGroup Id="MainTimer">
       <Text Id="__SingleUse_DPO2" Alignment="Left" TypographyId="WildCardTimer">
         <Translation Language="GB">&lt;value&gt;</Translation>
@@ -39,6 +56,12 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="settings_text" Alignment="Right" TypographyId="Default">
+        <Translation Language="GB">settings</Translation>
+      </Text>
+      <Text Id="__SingleUse_SY1V" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">SET</Translation>
+      </Text>
       <Text Id="__SingleUse_I1NR" Alignment="Left" TypographyId="WildCardTimer">
         <Translation Language="GB">05</Translation>
       </Text>

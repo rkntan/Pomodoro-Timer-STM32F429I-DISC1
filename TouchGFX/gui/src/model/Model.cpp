@@ -13,7 +13,7 @@ extern RTC_DateTypeDef RTC_Date;
 
 #endif
 
-
+// Record start time
 
 Model::Model() : modelListener(0)
 {
@@ -22,6 +22,7 @@ Model::Model() : modelListener(0)
 
 void Model::tick()
 {
+
 
 #ifndef GUI_TEST
 
@@ -35,4 +36,14 @@ void Model::tick()
 	modelListener->updateTime(0x12, 0x12, 0x12);
 #endif
 
+//	auto end = std::chrono::high_resolution_clock::now();
+//
+//	if (std::chrono::duration_cast<std::chrono::seconds>(end - begin).count() > 1) {
+//		count_tick++;
+//		modelListener->updateTimerCounter(count_tick);
+//		begin = std::chrono::high_resolution_clock::now();
+//	}
+//
 }
+
+

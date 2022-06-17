@@ -21,7 +21,7 @@ public:
     virtual void shortBreakDownButtonClicked();
 
 protected:
-    uint16_t shortBreakMinute = 0;
+    uint16_t shortBreakMinute = 5;
 };
 
 #endif // MAINVIEW_HPP

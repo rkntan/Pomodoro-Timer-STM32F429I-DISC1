@@ -330,6 +330,16 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/model/Model.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/TimerPresenter.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/timer_screen/TimerPresenter.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/TimerView.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/timer_screen/TimerView.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/ApplicationFontProvider.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/ApplicationFontProvider.cpp</locationURI>
@@ -465,29 +475,19 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/main_screen/MainViewBase.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/TimerViewBase.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/timer_screen/TimerViewBase.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/BitmapDatabase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/BitmapDatabase.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_Blue_Icons_Down_arrow_48.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Down_arrow_48.cpp</locationURI>
-		</link>
-		<link>
 			<name>Application/User/generated/image_Blue_Icons_Up_arrow_48.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Up_arrow_48.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/image_Blue_PageIndicator_dot_indicator_small_highlight.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_PageIndicator_dot_indicator_small_highlight.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/image_Blue_PageIndicator_dot_indicator_small_normal.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_PageIndicator_dot_indicator_small_normal.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_Dark_Buttons_Round_Edge_icon_button.cpp</name>
@@ -498,6 +498,56 @@
 			<name>Application/User/generated/image_Dark_Buttons_Round_Edge_icon_button_pressed.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Dark_Buttons_Round_Edge_icon_button_pressed.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Dark_Buttons_Round_Edge_small.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Dark_Buttons_Round_Edge_small.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Dark_Buttons_Round_Edge_small_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Dark_Buttons_Round_Edge_small_pressed.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Dark_Icons_Down_arrow_48.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Dark_Icons_Down_arrow_48.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Dark_PageIndicator_dot_indicator_large_highlight.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Dark_PageIndicator_dot_indicator_large_highlight.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Dark_PageIndicator_dot_indicator_large_normal.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Dark_PageIndicator_dot_indicator_large_normal.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Dark_PageIndicator_dot_indicator_small_highlight.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Dark_PageIndicator_dot_indicator_small_highlight.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Dark_PageIndicator_dot_indicator_small_normal.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Dark_PageIndicator_dot_indicator_small_normal.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Dark_Togglebars_Toggle_large_button_Off.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Dark_Togglebars_Toggle_large_button_Off.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Dark_Togglebars_Toggle_large_button_On.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Dark_Togglebars_Toggle_large_button_On.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_tomato.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_tomato.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/LanguageGb.cpp</name>

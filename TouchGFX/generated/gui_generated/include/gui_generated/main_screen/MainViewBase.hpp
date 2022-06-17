@@ -17,6 +17,7 @@
 #include <gui/containers/MinutesContainer.hpp>
 #include <gui/containers/SecondContainer.hpp>
 #include <touchgfx/containers/clock/DigitalClock.hpp>
+#include <touchgfx/widgets/ButtonWithLabel.hpp>
 
 class MainViewBase : public touchgfx::View<MainPresenter>
 {
@@ -80,6 +81,7 @@ protected:
     touchgfx::ScrollList secondScrollList;
     touchgfx::DrawableListItems<SecondContainer, 2> secondScrollListListItems;
     touchgfx::DigitalClock digitalClock;
+    touchgfx::ButtonWithLabel set_button;
 
     /*
      * Wildcard Buffers

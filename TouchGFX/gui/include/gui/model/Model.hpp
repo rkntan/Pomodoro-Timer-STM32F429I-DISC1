@@ -1,6 +1,7 @@
 #ifndef MODEL_HPP
 #define MODEL_HPP
 
+
 class ModelListener;
 
 class Model
@@ -14,8 +15,10 @@ public:
     }
 
     void tick();
+
 protected:
     ModelListener* modelListener;
+
 };
 
 #endif // MODEL_HPP

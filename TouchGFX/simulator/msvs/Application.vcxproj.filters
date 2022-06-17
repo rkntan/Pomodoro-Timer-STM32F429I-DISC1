@@ -196,6 +196,18 @@
     <Filter Include="Header Files\generated\gui_generated\containers">
       <UniqueIdentifier>6835C5F2-A31D-4F78-093B-360335595ACF</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\timer_screen">
+      <UniqueIdentifier>77FB66B0-4EDF-A9F7-941C-A966DBD50AE5</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\timer_screen">
+      <UniqueIdentifier>5C09C322-B7BF-4F92-4C61-CFE0FFE5B004</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\timer_screen">
+      <UniqueIdentifier>B3D96CCF-C632-8D82-AECE-7256CA1BE32C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\timer_screen">
+      <UniqueIdentifier>8E64257D-96F7-CE42-8CEB-541DA82DB0F9</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -248,6 +260,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\SecondContainerBase.cpp">
       <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\timer_screen\TimerPresenter.cpp">
+      <Filter>Source Files\gui\timer_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\timer_screen\TimerView.cpp">
+      <Filter>Source Files\gui\timer_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\timer_screen\TimerViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\timer_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -711,6 +732,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\SecondContainerBase.hpp">
       <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\timer_screen\TimerPresenter.hpp">
+      <Filter>Header Files\gui\timer_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\timer_screen\TimerView.hpp">
+      <Filter>Header Files\gui\timer_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\timer_screen\TimerViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\timer_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

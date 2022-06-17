@@ -23,6 +23,11 @@ public:
     // Main
     void gotoMainScreenNoTransition();
 
+    void gotoMainScreenBlockTransition();
+
+    // Timer
+    void gotoTimerScreenBlockTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -30,6 +35,11 @@ protected:
 
     // Main
     void gotoMainScreenNoTransitionImpl();
+
+    void gotoMainScreenBlockTransitionImpl();
+
+    // Timer
+    void gotoTimerScreenBlockTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

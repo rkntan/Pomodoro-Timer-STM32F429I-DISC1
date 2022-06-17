@@ -63,7 +63,8 @@ build/MINGW32_NT-6.2/gui/src/main_screen/MainView.o: \
  gui/include/gui/containers/SecondContainer.hpp \
  generated/gui_generated/include/gui_generated/containers/SecondContainerBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp
 
 gui/include/gui/main_screen/MainView.hpp:
 
@@ -192,3 +193,5 @@ generated/gui_generated/include/gui_generated/containers/SecondContainerBase.hpp
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:

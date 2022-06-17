@@ -28,6 +28,9 @@
     <ClCompile Include="..\..\generated\gui_generated\src\containers\MinutesContainerBase.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\SecondContainer.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\SecondContainerBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\timer_screen\TimerPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\timer_screen\TimerView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\timer_screen\TimerViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -185,6 +188,9 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\MinutesContainerBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\SecondContainer.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\SecondContainerBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\timer_screen\TimerPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\timer_screen\TimerView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\timer_screen\TimerViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

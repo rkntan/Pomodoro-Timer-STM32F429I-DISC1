@@ -61,8 +61,8 @@ MainViewBase::MainViewBase() :
     swipeContainer1Page2.add(buttonUpP);
 
     buttonDownP.setXY(170, 166);
-    buttonDownP.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_DOWN_ARROW_48_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_DOWN_ARROW_48_ID));
-    buttonDownP.setIconXY(7, 17);
+    buttonDownP.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_DOWN_ARROW_48_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_DOWN_ARROW_48_ID));
+    buttonDownP.setIconXY(6, 16);
     buttonDownP.setAction(buttonCallback);
     swipeContainer1Page2.add(buttonDownP);
 
@@ -127,7 +127,7 @@ MainViewBase::MainViewBase() :
     secondScrollList.setDrawables(secondScrollListListItems, updateItemCallback);
     swipeContainer1Page1.add(secondScrollList);
     swipeContainer.add(swipeContainer1Page1);
-    swipeContainer.setSelectedPage(1);
+    swipeContainer.setSelectedPage(2);
 
     digitalClock.setPosition(70, 291, 100, 22);
     digitalClock.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -136,11 +136,19 @@ MainViewBase::MainViewBase() :
     digitalClock.setDisplayMode(touchgfx::DigitalClock::DISPLAY_24_HOUR);
     digitalClock.setTime24Hour(10, 10, 0);
 
+    set_button.setXY(35, 212);
+    set_button.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    set_button.setLabelText(touchgfx::TypedText(T___SINGLEUSE_SY1V));
+    set_button.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    set_button.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    set_button.setAction(buttonCallback);
+
     add(__background);
     add(bg);
     add(overlay);
     add(swipeContainer);
     add(digitalClock);
+    add(set_button);
 }
 
 void MainViewBase::setupScreen()
@@ -172,6 +180,13 @@ void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //When buttonDownP clicked call virtual function
         //Call shortBreakDownButtonClicked
         shortBreakDownButtonClicked();
+    }
+    else if (&src == &set_button)
+    {
+        //Interaction1
+        //When set_button clicked change screen to Timer
+        //Go to Timer with block transition
+        application().gotoTimerScreenBlockTransition();
     }
 }
 
