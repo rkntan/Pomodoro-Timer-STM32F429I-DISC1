@@ -12,7 +12,7 @@ class MinutesContainerBase : public touchgfx::Container
 {
 public:
     MinutesContainerBase();
-    virtual ~MinutesContainerBase() {}
+    virtual ~MinutesContainerBase();
     virtual void initialize();
 
 protected:

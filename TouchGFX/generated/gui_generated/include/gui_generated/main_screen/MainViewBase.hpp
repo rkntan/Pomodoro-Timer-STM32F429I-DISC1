@@ -23,7 +23,7 @@ class MainViewBase : public touchgfx::View<MainPresenter>
 {
 public:
     MainViewBase();
-    virtual ~MainViewBase() {}
+    virtual ~MainViewBase();
     virtual void setupScreen();
 
     virtual void minuteScrollListUpdateItem(MinutesContainer& item, int16_t itemIndex)
@@ -43,7 +43,6 @@ public:
     {
         // Override and implement this function in Main
     }
-
     virtual void shortBreakDownButtonClicked()
     {
         // Override and implement this function in Main
@@ -77,7 +76,6 @@ protected:
     touchgfx::TextArea seperator;
     touchgfx::ScrollList minuteScrollList;
     touchgfx::DrawableListItems<MinutesContainer, 2> minuteScrollListListItems;
-
     touchgfx::ScrollList secondScrollList;
     touchgfx::DrawableListItems<SecondContainer, 2> secondScrollListListItems;
     touchgfx::DigitalClock digitalClock;
@@ -94,14 +92,14 @@ private:
     /*
      * Callback Declarations
      */
-    touchgfx::Callback<MainViewBase, const touchgfx::AbstractButton&> buttonCallback;
     touchgfx::Callback<MainViewBase, touchgfx::DrawableListItemsInterface*, int16_t, int16_t> updateItemCallback;
+    touchgfx::Callback<MainViewBase, const touchgfx::AbstractButton&> buttonCallback;
 
     /*
      * Callback Handler Declarations
      */
-    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
     void updateItemCallbackHandler(touchgfx::DrawableListItemsInterface* items, int16_t containerIndex, int16_t itemIndex);
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
 };
 

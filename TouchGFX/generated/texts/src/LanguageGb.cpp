@@ -7,25 +7,26 @@
 TEXT_LOCATION_FLASH_PRAGMA
 KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE;
 
+// Remap all strings
 TEXT_LOCATION_FLASH_PRAGMA
 KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
-    62, // T_wild_timer_min
-    56, // T_wild_timer_sec
-    65, // T_separatorS2
-    50, // T_timer_sec
-    50, // T_timer_min
-    50, // T___SingleUse_DPO2
-    50, // T___SingleUse_1U1V
-    56, // T___SingleUse_KUXL
-    62, // T___SingleUse_8QUJ
-    65, // T___SingleUse_SC4Z
-    23, // T_ResourceId4
-    50, // T___SingleUse_LFMR
-    32, // T_ResourceId1
-    0, // T_ResourceId2
-    12, // T_ResourceId3
-    41, // T_settings_text
-    52, // T___SingleUse_SY1V
-    59, // T___SingleUse_I1NR
-    50 // T___SingleUse_VVMO
+    62, // T_WILD_TIMER_MIN: "25"
+    56, // T_WILD_TIMER_SEC: "00"
+    65, // T_SEPARATORS2: ":"
+    50, // T_TIMER_SEC: "<>"
+    50, // T_TIMER_MIN: "<>"
+    50, // T___SINGLEUSE_DPO2: "<>"
+    50, // T___SINGLEUSE_1U1V: "<>"
+    56, // T___SINGLEUSE_KUXL: "00"
+    62, // T___SINGLEUSE_8QUJ: "25"
+    65, // T___SINGLEUSE_SC4Z: ":"
+    23, // T_RESOURCEID4: "New Text"
+    50, // T___SINGLEUSE_LFMR: "<>"
+    32, // T_RESOURCEID1: "POMODORO"
+    0,  // T_RESOURCEID2: "SHORT BREAK"
+    12, // T_RESOURCEID3: "LONG BREAK"
+    41, // T_SETTINGS_TEXT: "settings"
+    52, // T___SINGLEUSE_SY1V: "SET"
+    59, // T___SINGLEUSE_I1NR: "05"
+    50  // T___SINGLEUSE_VVMO: "<>"
 };

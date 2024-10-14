@@ -18,6 +18,7 @@ void MainView::tearDownScreen()
 {
     MainViewBase::tearDownScreen();
 }
+
 /*
 void MainView::handleTickEvent()
  {
@@ -45,6 +46,7 @@ void MainView::handleTickEvent()
     }
     
  }*/
+
 void MainView::updateTime(uint8_t hour, uint8_t minute, uint8_t second)
 {
 	digitalClock.setTime24Hour(hour, minute, second);
@@ -56,6 +58,9 @@ void MainView::minuteScrollListUpdateItem(MinutesContainer& item, int16_t itemIn
 {
     // Override and implement this function in Main
     item.setNumber(itemIndex);
+    if(itemIndex == 25){
+        
+    }
 }
 
 

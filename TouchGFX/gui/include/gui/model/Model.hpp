@@ -18,7 +18,10 @@ public:
 
 protected:
     ModelListener* modelListener;
-
+    int tickCounter;
+    int digitalHours;
+    int digitalMinutes;
+    int digitalSeconds;
 };
 
 #endif // MODEL_HPP

@@ -11,22 +11,27 @@ build/MINGW32_NT-6.2/gui/src/containers/MinutesContainer.o: \
  ../Middlewares/ST/touchgfx/framework/include/mvp/MVPHeap.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Application.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/UIEventListener.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Event.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/events/DragEvent.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/events/GestureEvent.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/UIEventListener.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/TextureMapTypes.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorFontRenderer.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/button/ButtonController.hpp \
@@ -42,7 +47,6 @@ build/MINGW32_NT-6.2/gui/src/containers/MinutesContainer.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp
 
 gui/include/gui/containers/MinutesContainer.hpp:
@@ -67,7 +71,9 @@ generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Application.hpp:
 
-../Middlewares/ST/touchgfx/framework/include/touchgfx/UIEventListener.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp:
 
@@ -77,9 +83,9 @@ generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/events/GestureEvent.hpp:
 
-../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/UIEventListener.hpp:
 
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp:
 
@@ -89,6 +95,16 @@ generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TextureMapTypes.hpp:
 
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorFontRenderer.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
+
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:
@@ -96,8 +112,6 @@ generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:
 
@@ -128,7 +142,5 @@ gui/include/gui/model/Model.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:

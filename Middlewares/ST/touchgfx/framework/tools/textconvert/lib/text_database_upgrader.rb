@@ -1,7 +1,7 @@
-# Copyright (c) 2018(-2022) STMicroelectronics.
+# Copyright (c) 2018(-2024) STMicroelectronics.
 # All rights reserved.
 #
-# This file is part of the TouchGFX 4.19.1 distribution.
+# This file is part of the TouchGFX 4.24.1 distribution.
 #
 # This software is licensed under terms that can be found in the LICENSE file in
 # the root directory of this software component.
@@ -52,6 +52,12 @@ class TextDatabaseUpgrader
     end
     # Now @xml_doc contains 4.19.0 xml data
 
+    version_4_23 = Gem::Version.new('4.23.0')
+    if @intermediate_version < version_4_23 && @upgrade_version >= version_4_23
+      @xml_doc, @intermediate_version = UpgradeTo_4_23.new(@xml_doc).run
+    end
+    # Now @xml_doc contains 4.23.0 xml data
+
     if @xml_doc.at('//TextDatabase')
       @xml_doc.at('TextDatabase')['Version'] = @upgrade_version.version
       xml_file_name = @file_name.gsub(/\.xlsx$/, '.xml')
@@ -59,6 +65,30 @@ class TextDatabaseUpgrader
     else
       fail "ERROR: Unsupported upgrade version: #{@upgrade_version.version}"
     end
+  end
+end
+
+class UpgradeTo_4_23
+  def initialize(xml_doc)
+    @xml_doc = xml_doc
+  end
+
+  def run  
+    # Add <IsVector> inside <Typography>
+    @xml_doc.xpath("//Typography").each do |typography_node|
+      if !typography_node.has_attribute?('IsVector')
+        typography_node['IsVector'] = 'no'
+      end
+    end
+
+    # Add <IsVector> inside <LanguageSetting>
+    @xml_doc.xpath("//LanguageSetting").each do |language_setting_node|
+      if !language_setting_node.has_attribute?('IsVector')
+        language_setting_node['IsVector'] = 'no'
+      end
+    end
+    
+    return @xml_doc, Gem::Version.new('4.23.0')
   end
 end
 
@@ -401,10 +431,10 @@ class UpgradeTo_4_18
       # Add <Text> with required attributes inside <Texts>
       text_node = texts_node.add_child(Nokogiri::XML::Node.new('Text', xml_doc))
       text_node['Id'] = entry.text_id
-      text_node['TypographyId'] = entry.typography
-      text_node['Alignment'] = entry.alignment.capitalize
-      text_node['Direction'] = entry.direction
-      @text_entries.languages.each do |lang|
+      text_node['TypographyId'] = entry.default_typography
+      text_node['Alignment'] = entry.default_alignment.capitalize
+      text_node['Direction'] = entry.default_direction
+      @text_entries.entries.first.languages.each do |lang|
         # Add <Translation> with required attribute
         translation_node = text_node.add_child(Nokogiri::XML::Node.new('Translation', xml_doc))
         translation_node['Language'] = lang
@@ -437,3 +467,4 @@ class UpgradeTo_4_18
     return xml_doc, Gem::Version.new('4.18.0')
   end
 end
+

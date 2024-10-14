@@ -12,7 +12,7 @@ class SecondContainerBase : public touchgfx::Container
 {
 public:
     SecondContainerBase();
-    virtual ~SecondContainerBase() {}
+    virtual ~SecondContainerBase();
     virtual void initialize();
 
 protected:

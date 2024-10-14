@@ -16,12 +16,15 @@ SecondContainerBase::SecondContainerBase()
     numberSeconds.setWildcard(numberSecondsBuffer);
     numberSeconds.resizeToCurrentText();
     numberSeconds.setTypedText(touchgfx::TypedText(T___SINGLEUSE_DPO2));
-
     add(numberSeconds);
+}
+
+SecondContainerBase::~SecondContainerBase()
+{
+
 }
 
 void SecondContainerBase::initialize()
 {
 
 }
-

@@ -3,23 +3,25 @@
 /*********************************************************************************/
 #include <gui_generated/main_screen/MainViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include <BitmapDatabase.hpp>
+#include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
 MainViewBase::MainViewBase() :
-    buttonCallback(this, &MainViewBase::buttonCallbackHandler),
-    updateItemCallback(this, &MainViewBase::updateItemCallbackHandler)
+    updateItemCallback(this, &MainViewBase::updateItemCallbackHandler),
+    buttonCallback(this, &MainViewBase::buttonCallbackHandler)
 {
-
     __background.setPosition(0, 0, 240, 320);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    add(__background);
 
     bg.setPosition(0, 0, 240, 320);
     bg.setColor(touchgfx::Color::getColorFromRGB(240, 91, 86));
+    add(bg);
 
     overlay.setPosition(0, 8, 240, 48);
     overlay.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     overlay.setAlpha(20);
+    add(overlay);
 
     swipeContainer.setXY(0, 0);
     swipeContainer.setSwipeCutoff(50);
@@ -27,17 +29,16 @@ MainViewBase::MainViewBase() :
 
     swipeContainer1Page3.setWidth(240);
     swipeContainer1Page3.setHeight(320);
-
     textArea3.setXY(23, 15);
     textArea3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea3.setLinespacing(0);
     textArea3.setTypedText(touchgfx::TypedText(T_RESOURCEID3));
     swipeContainer1Page3.add(textArea3);
+
     swipeContainer.add(swipeContainer1Page3);
 
     swipeContainer1Page2.setWidth(240);
     swipeContainer1Page2.setHeight(320);
-
     textArea2.setXY(13, 15);
     textArea2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea2.setLinespacing(0);
@@ -79,11 +80,11 @@ MainViewBase::MainViewBase() :
     shortBreakText.resizeToCurrentText();
     shortBreakText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_VVMO));
     swipeContainer1Page2.add(shortBreakText);
+
     swipeContainer.add(swipeContainer1Page2);
 
     swipeContainer1Page1.setWidth(240);
     swipeContainer1Page1.setHeight(320);
-
     textArea1.setXY(29, 15);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea1.setLinespacing(0);
@@ -110,6 +111,7 @@ MainViewBase::MainViewBase() :
     minuteScrollList.setNumberOfItems(26);
     minuteScrollList.setPadding(0, 0);
     minuteScrollList.setSnapping(true);
+    minuteScrollList.setOvershootPercentage(0);
     minuteScrollList.setDrawableSize(60, 0);
     minuteScrollList.setDrawables(minuteScrollListListItems, updateItemCallback);
     swipeContainer1Page1.add(minuteScrollList);
@@ -123,18 +125,23 @@ MainViewBase::MainViewBase() :
     secondScrollList.setNumberOfItems(60);
     secondScrollList.setPadding(0, 0);
     secondScrollList.setSnapping(true);
+    secondScrollList.setOvershootPercentage(0);
     secondScrollList.setDrawableSize(60, 0);
     secondScrollList.setDrawables(secondScrollListListItems, updateItemCallback);
     swipeContainer1Page1.add(secondScrollList);
+
     swipeContainer.add(swipeContainer1Page1);
+
     swipeContainer.setSelectedPage(2);
+    add(swipeContainer);
 
     digitalClock.setPosition(70, 291, 100, 22);
     digitalClock.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     digitalClock.setTypedText(touchgfx::TypedText(T___SINGLEUSE_LFMR));
     digitalClock.displayLeadingZeroForHourIndicator(true);
-    digitalClock.setDisplayMode(touchgfx::DigitalClock::DISPLAY_24_HOUR);
-    digitalClock.setTime24Hour(10, 10, 0);
+    digitalClock.setDisplayMode(touchgfx::DigitalClock::DISPLAY_12_HOUR);
+    digitalClock.setTime12Hour(10, 10, 0, true);
+    add(digitalClock);
 
     set_button.setXY(35, 212);
     set_button.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
@@ -142,13 +149,12 @@ MainViewBase::MainViewBase() :
     set_button.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     set_button.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     set_button.setAction(buttonCallback);
-
-    add(__background);
-    add(bg);
-    add(overlay);
-    add(swipeContainer);
-    add(digitalClock);
     add(set_button);
+}
+
+MainViewBase::~MainViewBase()
+{
+
 }
 
 void MainViewBase::setupScreen()
@@ -174,14 +180,14 @@ void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //Call shortBreakUpButtonClicked
         shortBreakUpButtonClicked();
     }
-    else if (&src == &buttonDownP)
+    if (&src == &buttonDownP)
     {
         //shortBreakDownButtonClicked
         //When buttonDownP clicked call virtual function
         //Call shortBreakDownButtonClicked
         shortBreakDownButtonClicked();
     }
-    else if (&src == &set_button)
+    if (&src == &set_button)
     {
         //Interaction1
         //When set_button clicked change screen to Timer
@@ -194,14 +200,11 @@ void MainViewBase::updateItemCallbackHandler(touchgfx::DrawableListItemsInterfac
 {
     if (items == &minuteScrollListListItems)
     {
-        touchgfx::Drawable* d = items->getDrawable(containerIndex);
-        MinutesContainer* cc = (MinutesContainer*)d;
-        minuteScrollListUpdateItem(*cc, itemIndex);
+        minuteScrollListUpdateItem(minuteScrollListListItems[containerIndex], itemIndex);
     }
-    else if (items == &secondScrollListListItems)
+
+    if (items == &secondScrollListListItems)
     {
-        touchgfx::Drawable* d = items->getDrawable(containerIndex);
-        SecondContainer* cc = (SecondContainer*)d;
-        secondScrollListUpdateItem(*cc, itemIndex);
+        secondScrollListUpdateItem(secondScrollListListItems[containerIndex], itemIndex);
     }
 }

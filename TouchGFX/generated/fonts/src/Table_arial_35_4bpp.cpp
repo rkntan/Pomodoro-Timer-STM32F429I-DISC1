@@ -33,6 +33,6 @@ touchgfx::GeneratedFont& getFont_arial_35_4bpp();
 
 touchgfx::GeneratedFont& getFont_arial_35_4bpp()
 {
-    static touchgfx::GeneratedFont arial_35_4bpp(glyphs_arial_35_4bpp, 11, 35, 0, 4, 1, 0, 0, unicodes_arial_35_4bpp, kerning_arial_35_4bpp, 63, 0, 0, &arial_contextualFormsTable);
+    static touchgfx::GeneratedFont arial_35_4bpp(glyphs_arial_35_4bpp, 11, 35, 35, 0, 0, 4, 1, 0, 0, unicodes_arial_35_4bpp, kerning_arial_35_4bpp, 63, 0, 0, &arial_contextualFormsTable);
     return arial_35_4bpp;
 }

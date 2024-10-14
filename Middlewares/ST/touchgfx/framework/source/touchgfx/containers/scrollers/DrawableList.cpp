@@ -1,8 +1,8 @@
 /******************************************************************************
-* Copyright (c) 2018(-2022) STMicroelectronics.
+* Copyright (c) 2018(-2024) STMicroelectronics.
 * All rights reserved.
 *
-* This file is part of the TouchGFX 4.19.1 distribution.
+* This file is part of the TouchGFX 4.24.1 distribution.
 *
 * This software is licensed under terms that can be found in the LICENSE file in
 * the root directory of this software component.
@@ -138,7 +138,7 @@ int16_t DrawableList::getRequiredNumberOfDrawables() const
         }
     }
 
-    int16_t numberOfDrawables = drawableItems->getNumberOfDrawables();
+    const int16_t numberOfDrawables = drawableItems->getNumberOfDrawables();
     return MIN((numberOfDrawables - firstDrawableIndex), requiredDrawables);
 }
 
@@ -160,13 +160,13 @@ void DrawableList::setOffset(int32_t ofs)
     int16_t newFirstItem = 0;
     if (ofs > 0)
     {
-        int numberOfItems = ofs / itemSize + 1;
+        const int numberOfItems = ofs / itemSize + 1;
         newFirstItem -= numberOfItems;
         ofs -= numberOfItems * itemSize;
     }
     if (ofs <= -itemSize)
     {
-        int numberOfItems = ofs / itemSize;
+        const int numberOfItems = ofs / itemSize;
         newFirstItem -= numberOfItems;
         ofs -= numberOfItems * itemSize;
     }
@@ -174,7 +174,10 @@ void DrawableList::setOffset(int32_t ofs)
     {
         // Make sure that firstIndex is "in range"
         newFirstItem %= numItems;
-        newFirstItem = (newFirstItem + numItems) % numItems;
+        if (newFirstItem < 0)
+        {
+            newFirstItem += numItems;
+        }
     }
     else
     {
@@ -185,7 +188,7 @@ void DrawableList::setOffset(int32_t ofs)
         }
         else if (newFirstItem + numDrawables > numItems)
         {
-            int x = numItems - (newFirstItem + numDrawables);
+            const int x = numItems - (newFirstItem + numDrawables);
             ofs += x * itemSize;
             newFirstItem += x;
         }
@@ -221,7 +224,7 @@ void DrawableList::setOffset(int32_t ofs)
 
     for (int i = 0; i < numDrawables; i++)
     {
-        int drawableIndex = (firstDrawable + i) % numDrawables;
+        const int drawableIndex = (firstDrawable + i) % numDrawables;
         Drawable* drawable = drawableItems->getDrawable(drawableIndex + firstDrawableIndex);
         if (isHorizontal)
         {
@@ -322,7 +325,7 @@ int16_t DrawableList::getDrawableIndex(int16_t itemIndex, int16_t prevDrawableIn
         }
         if (itemIndex == currentItemIndex)
         {
-            int16_t drawableIndex = (firstDrawable + i) % numDrawables;
+            const int16_t drawableIndex = (firstDrawable + i) % numDrawables;
             return drawableIndex;
         }
     }
@@ -340,18 +343,13 @@ void DrawableList::refreshDrawables()
     // Remove everything
     Container::removeAll();
     // Add the itemDrawables
+    const int16_t w = isHorizontal ? itemSize - 2 * itemMargin : getWidth();
+    const int16_t h = isHorizontal ? getHeight() : itemSize - 2 * itemMargin;
     for (int drawableIndex = 0; drawableIndex < numDrawables; drawableIndex++)
     {
         Drawable* drawable = drawableItems->getDrawable(drawableIndex + firstDrawableIndex);
         // Resize the drawables, X/Y ignored for now.
-        if (isHorizontal)
-        {
-            drawable->setPosition(0, 0, itemSize - 2 * itemMargin, getHeight());
-        }
-        else
-        {
-            drawable->setPosition(0, 0, getWidth(), itemSize - 2 * itemMargin);
-        }
+        drawable->setPosition(0, 0, w, h);
         // Add each drawable for later positioning
         if (drawable->getParent() != 0)
         {

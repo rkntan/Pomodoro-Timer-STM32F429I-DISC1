@@ -19,7 +19,7 @@ class TimerViewBase : public touchgfx::View<TimerPresenter>
 {
 public:
     TimerViewBase();
-    virtual ~TimerViewBase() {}
+    virtual ~TimerViewBase();
     virtual void setupScreen();
 
     /*
@@ -60,22 +60,23 @@ protected:
 private:
 
     /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 3600;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
+
+    /*
      * Callback Declarations
      */
-    touchgfx::Callback<TimerViewBase, const touchgfx::AbstractButton&> buttonCallback;
     touchgfx::Callback<TimerViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
+    touchgfx::Callback<TimerViewBase, const touchgfx::AbstractButton&> buttonCallback;
 
     /*
      * Callback Handler Declarations
      */
-    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
     void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
-    /*
-     * Canvas Buffer Size
-     */
-    static const uint16_t CANVAS_BUFFER_SIZE = 3600;
-    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 };
 
 #endif // TIMERVIEWBASE_HPP

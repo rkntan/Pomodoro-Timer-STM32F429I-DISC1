@@ -16,12 +16,15 @@ MinutesContainerBase::MinutesContainerBase()
     numberMinutes.setWildcard(numberMinutesBuffer);
     numberMinutes.resizeToCurrentText();
     numberMinutes.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1U1V));
-
     add(numberMinutes);
+}
+
+MinutesContainerBase::~MinutesContainerBase()
+{
+
 }
 
 void MinutesContainerBase::initialize()
 {
 
 }
-

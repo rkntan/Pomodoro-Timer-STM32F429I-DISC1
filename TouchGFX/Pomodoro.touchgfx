@@ -34,7 +34,6 @@
             "IndicatorImageHighlight": "__designer\\Dark_PageIndicator_dot_indicator_small_highlight.png",
             "EndSwipeElasticWidth": 50,
             "SelectedPage": "swipeContainer1Page1",
-            "Style": "Style1",
             "Components": [
               {
                 "Type": "Container",
@@ -47,8 +46,8 @@
                     "Name": "textArea3",
                     "X": 23,
                     "Y": 15,
-                    "Width": 195,
-                    "Height": 34,
+                    "Width": 202,
+                    "Height": 30,
                     "TextId": "ResourceId3",
                     "TextRotation": "0",
                     "Color": {
@@ -71,8 +70,8 @@
                     "Name": "textArea2",
                     "X": 13,
                     "Y": 15,
-                    "Width": 220,
-                    "Height": 34,
+                    "Width": 221,
+                    "Height": 30,
                     "TextId": "ResourceId2",
                     "TextRotation": "0",
                     "Color": {
@@ -130,8 +129,7 @@
                     "IconX": 6,
                     "IconY": 16,
                     "IconHeight": 28,
-                    "IconWidth": 48,
-                    "IconStyle": "Icon14"
+                    "IconWidth": 48
                   },
                   {
                     "Type": "Box",
@@ -147,8 +145,8 @@
                     "Name": "shortBreakText",
                     "X": 38,
                     "Y": 120,
-                    "Width": 89,
-                    "Height": 92,
+                    "Width": 90,
+                    "Height": 81,
                     "TextId": "__SingleUse_VVMO",
                     "TextRotation": "0",
                     "Color": {
@@ -176,8 +174,8 @@
                     "Name": "textArea1",
                     "X": 29,
                     "Y": 15,
-                    "Width": 182,
-                    "Height": 34,
+                    "Width": 181,
+                    "Height": 30,
                     "TextId": "ResourceId1",
                     "TextRotation": "0",
                     "Color": {
@@ -263,6 +261,7 @@
             "TextId": "__SingleUse_LFMR",
             "DisplaySeconds": true,
             "DisplayLeadingZeroForHourIndicator": true,
+            "UseAmPm": true,
             "InitialHour": 10,
             "InitialMinute": 10
           },
@@ -346,8 +345,8 @@
             "Name": "timer_min_text",
             "X": 31,
             "Y": 114,
-            "Width": 89,
-            "Height": 92,
+            "Width": 90,
+            "Height": 81,
             "TextId": "timer_min",
             "TextRotation": "0",
             "Color": {
@@ -383,8 +382,8 @@
             "Name": "timer_sec_text",
             "X": 133,
             "Y": 114,
-            "Width": 89,
-            "Height": 92,
+            "Width": 90,
+            "Height": 81,
             "TextId": "timer_sec",
             "TextRotation": "0",
             "Color": {
@@ -458,8 +457,7 @@
             "Width": 128,
             "Height": 38,
             "Pressed": "__designer\\Dark_Togglebars_Toggle_large_button_On.png",
-            "Released": "__designer\\Dark_Togglebars_Toggle_large_button_Off.png",
-            "Style": "Style1"
+            "Released": "__designer\\Dark_Togglebars_Toggle_large_button_Off.png"
           },
           {
             "Type": "FlexButton",
@@ -576,7 +574,6 @@
     "SelectedColorDepth": 16,
     "StartupScreenName": "Main",
     "SelectedStartupLanguage": "GB",
-    "Skin": "Dark",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",
     "AvailableColorDepths": [
@@ -620,6 +617,6 @@
     "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
     "OptionalComponents": []
   },
-  "Version": "4.19.1",
+  "Version": "4.24.1",
   "CreatedBy": "4.19.1"
 }

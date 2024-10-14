@@ -39,6 +39,6 @@ touchgfx::GeneratedFont& getFont_verdana_28_4bpp();
 
 touchgfx::GeneratedFont& getFont_verdana_28_4bpp()
 {
-    static touchgfx::GeneratedFont verdana_28_4bpp(glyphs_verdana_28_4bpp, 18, 28, 6, 4, 1, 0, 1, unicodes_verdana_28_4bpp, kerning_verdana_28_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont verdana_28_4bpp(glyphs_verdana_28_4bpp, 18, 34, 28, 0, 0, 4, 1, 0, 1, unicodes_verdana_28_4bpp, kerning_verdana_28_4bpp, 63, 0, 0, 0);
     return verdana_28_4bpp;
 }

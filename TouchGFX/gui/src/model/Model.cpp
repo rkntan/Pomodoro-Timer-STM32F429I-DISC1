@@ -20,30 +20,42 @@ Model::Model() : modelListener(0)
 
 }
 
+
 void Model::tick()
 {
-
-
 #ifndef GUI_TEST
 
-	HAL_RTC_GetTime(&hrtc, &RTC_Time, FORMAT_BIN);
-	HAL_RTC_GetDate(&hrtc, &RTC_Date, FORMAT_BIN);
+    HAL_RTC_GetTime(&hrtc, &RTC_Time, FORMAT_BIN);
+    HAL_RTC_GetDate(&hrtc, &RTC_Date);
 
-	modelListener->updateTime(RTC_Time.Hours, RTC_Time.Minutes, RTC_Time.Seconds);
+    modelListener->updateTime(RTC_Time.Hours, RTC_Time.Minutes, RTC_Time.Seconds);
+    
 #endif
 
 #ifdef SIMULATOR
-	modelListener->updateTime(0x12, 0x12, 0x12);
+
+    tickCounter++;
+
+    if (tickCounter % 60 == 0)
+    {
+        if (++digitalSeconds >= 60)
+        {
+            digitalSeconds = 0;
+            if (++digitalMinutes >= 60)
+            {
+                digitalMinutes = 0;
+                if (++digitalHours >= 24)
+                {
+                    digitalHours = 0;
+                }
+            }
+        }
+		// Update the clock
+		modelListener->updateTime(digitalHours, digitalMinutes, digitalSeconds);
+	}
 #endif
 
-//	auto end = std::chrono::high_resolution_clock::now();
-//
-//	if (std::chrono::duration_cast<std::chrono::seconds>(end - begin).count() > 1) {
-//		count_tick++;
-//		modelListener->updateTimerCounter(count_tick);
-//		begin = std::chrono::high_resolution_clock::now();
-//	}
-//
 }
+
 
 
