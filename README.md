@@ -8,6 +8,11 @@ This project is updated to use **TouchGFX version 4.24.1**.
 - TouchGFX framework
 - STM32CubeIDE
 
+## Screens
+main screen             |  timer screen
+:-------------------------:|:-------------------------:
+![main screen](images/main_screen.png)|  ![timer screen](images/timer_screen.png)
+
 ---
 
 > [!IMPORTANT]  
